@@ -11,7 +11,7 @@ class NotesItem extends StatelessWidget {
         bottom: 24,
         left: 16,
       ),
-      margin: const EdgeInsets.symmetric(vertical: 8),
+      margin: const EdgeInsets.symmetric(vertical: 4),
       decoration: BoxDecoration(
         color: Colors.blue,
         borderRadius: BorderRadius.circular(16),
