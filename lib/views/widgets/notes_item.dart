@@ -6,6 +6,12 @@ class NotesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.only(
+        top: 24,
+        bottom: 24,
+        left: 16,
+      ),
+      margin: const EdgeInsets.symmetric(vertical: 8),
       decoration: BoxDecoration(
         color: Colors.blue,
         borderRadius: BorderRadius.circular(16),
@@ -21,11 +27,17 @@ class NotesItem extends StatelessWidget {
                 fontSize: 26,
               ),
             ),
-            subtitle: Text(
-              'build your career with Mohamed Salah',
-              style: TextStyle(
-                color: Colors.black.withOpacity(.4),
-                fontSize: 19,
+            subtitle: Padding(
+              padding: const EdgeInsets.only(
+                top: 24,
+                bottom: 20,
+              ),
+              child: Text(
+                'build your career with Mohamed Salah',
+                style: TextStyle(
+                  color: Colors.black.withOpacity(.5),
+                  fontSize: 19,
+                ),
               ),
             ),
             trailing: IconButton(
@@ -37,10 +49,14 @@ class NotesItem extends StatelessWidget {
               ),
             ),
           ),
-          Text(
-            'May 24 , 2024',
-            style: TextStyle(
-              color: Colors.black.withOpacity(.4),
+          Padding(
+            padding: const EdgeInsets.only(right: 32),
+            child: Text(
+              'May 24 , 2024',
+              style: TextStyle(
+                color: Colors.black.withOpacity(.5),
+                fontSize: 16,
+              ),
             ),
           ),
         ],
