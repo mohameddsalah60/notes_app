@@ -74,7 +74,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
         title: title!,
         subtitle: subTitle!,
         date: DateTime.now().toString(),
-        color: 0);
+        color: Colors.blue.value);
     note.addNote(noteModel);
   }
 }
