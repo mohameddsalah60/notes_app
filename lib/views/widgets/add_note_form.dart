@@ -7,6 +7,7 @@ import '../../models/note_model.dart';
 import 'colors_list_view.dart';
 import 'custom_button.dart';
 import 'custom_text_field.dart';
+import 'show_snack_bar.dart';
 
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({
@@ -63,6 +64,11 @@ class _AddNoteFormState extends State<AddNoteForm> {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
                     addNotes();
+                    showSnackBar(
+                      context,
+                      'Add Note Success',
+                      color: Colors.green,
+                    );
                   } else {
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});
@@ -85,8 +91,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
         title: title!,
         subtitle: subTitle!,
         date:
-            '${nameMonth[DateTime.now().month]} ${DateTime.now().day},${DateTime.now().year}',
-        color: Colors.green.value);
+            '${kNameMonth[DateTime.now().month]} ${DateTime.now().day},${DateTime.now().year}',
+        color: 0);
     note.addNote(noteModel);
   }
 }
