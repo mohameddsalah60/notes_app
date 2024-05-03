@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
 
+import '../../constants.dart';
 import '../../models/note_model.dart';
 import 'custom_button.dart';
 import 'custom_text_field.dart';
@@ -78,8 +79,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
     NoteModel noteModel = NoteModel(
         title: title!,
         subtitle: subTitle!,
-        date: DateTime.now().toString(),
-        color: Colors.blue.value);
+        date:
+            '${nameMonth[DateTime.now().month]} ${DateTime.now().day},${DateTime.now().year}',
+        color: Colors.green.value);
     note.addNote(noteModel);
   }
 }
